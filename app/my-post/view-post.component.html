@@ -1,0 +1,55 @@
+<app-header></app-header>
+<div style="display: flex; margin-top: 10vh; margin-right: 5vw">
+  <div
+    *ngIf="nodata"
+    class="col-12"
+    style="
+      display: flex;
+      align-items: center;
+      margin-top: 20vh;
+      margin-left: 20vw;
+    "
+  >
+    <h1 style="color: white; display: block">
+      <i class="fas fa-comment-slash" aria-hidden="true"></i>
+    </h1>
+    <br />
+    <h6 style="color: white">No Post created Yet</h6>
+  </div>
+  <div class="container" style="margin-left: 7vw">
+    <div class="row">
+      <div
+        class="col-4 bootstrap snippets bootdeys"
+        *ngFor="let post of posts; let number = post"
+        style="margin-bottom: 10px"
+      >
+        <div class="widget panel">
+          <ul class="list-group">
+            <li class="list-group-item">
+              <p class="nm">
+                {{ post.title }}
+              </p>
+              <small class="text-muted">{{ calcDate(post.createdAt) }}</small>
+              <div style="display: flex" class="row">
+                <p
+                  (click)="deletePost(post)"
+                  class="col-4"
+                  style="color: crimson; cursor: pointer"
+                >
+                  <i class="fa fa-trash" aria-hidden="true"></i>
+                </p>
+                <p
+                  (click)="updatePost(post)"
+                  class="col-4"
+                  style="color: darkgreen; cursor: pointer"
+                >
+                  <i class="fa fa-pencil" aria-hidden="true"></i>
+                </p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

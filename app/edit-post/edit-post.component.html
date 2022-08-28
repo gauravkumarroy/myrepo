@@ -1,0 +1,17 @@
+<app-header></app-header>
+<div style="display: flex;margin-top:10vh;width:60vw;" >
+    <form style="margin-left:10vw;width:60vw;" (ngSubmit)="updatePost()" [formGroup]="postForm" >
+        <div >
+            <label for="exampleFormControlTextarea1" style="color:white;" class="form-label">Edit your Post</label>
+            <textarea formControlName="tittle" class="form-control" id="exampleFormControlTextarea1" rows="6" [(ngModel)]="posts.title" [ngClass]="{ 'is-invalid': submitted && f.tittle.errors } " [(ngModel)]="posts.title"></textarea>
+            <div *ngIf="submitted && (f.tittle.errors||nochanges)" class="invalid-feedback">
+                <div *ngIf="f.tittle.errors.required"><span style="color: white;">Empty post not allowed</span></div>
+                <div *ngIf="nochanges"><span style="color: white;">Make changes in post to update</span></div>
+            </div>
+        </div><br>
+          <div>
+              <Button class="btn btn-primary">Update Post</Button>
+          </div>
+    </form>
+    
+ </div> 

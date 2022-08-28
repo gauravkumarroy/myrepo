@@ -1,0 +1,46 @@
+.panel-body {
+    position: relative;
+    background-color: white;
+}
+
+.mb0 {
+    margin-bottom: 0!important;
+}
+
+.text-info {
+    color: #22A7F0!important;
+}
+
+.list-table {
+    display: table;
+    table-layout: fixed;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.list-table>li:first-child {
+    padding-left: 0;
+}
+
+.list-table>li {
+    display: table-cell;
+    table-layout: fixed;
+    vertical-align: middle;
+    width: auto;
+    padding: 0 5px;
+}
+
+
+
+.ellipsis {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.semibold {
+    font-weight: 600;
+}
+.nm {
+    margin: 0!important;
+}

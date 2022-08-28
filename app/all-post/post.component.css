@@ -1,0 +1,12 @@
+
+#star {
+  margin-left: -5px !important;
+  vertical-align: bottom !important;
+  opacity: 0.5;
+}
+.more {
+  opacity: 0.5 !important;
+}
+.card {
+  border-radius: 10px !important;
+}

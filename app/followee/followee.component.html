@@ -1,0 +1,32 @@
+<app-header></app-header>
+<div class="text-center">
+    <h4 style="margin-top: 5vh;color:white">People Following You</h4>
+  </div>
+  <div style="display: flex; margin-top: 1vh; margin-left: 5vw">
+    <div class="container">
+      <div *ngIf="nodata" class="col-7 card-body" style="display: flex; align-items: center;margin-top: 20vh;">
+        <h1 style="color: white;"><i class="fa fa-users" aria-hidden="true"></i></h1> 
+        <h6 style="color: white;">You are not Followed by  anyone</h6>
+      </div>
+      <div class="card row" *ngFor="let us of users;" style="border: green 2px bold;">
+        <div class="col">
+          <div class="card-body">
+            <h6>
+              <i class="fa fa-user" aria-hidden="true"></i> {{ us.fname }}
+              {{ us.lname }}
+            </h6>
+            <div class="user">
+              <div class="user-info">
+                <i class="fa fa-envelope" aria-hidden="true"></i>
+                <small> {{ us.email }}</small>
+              </div>
+            </div><br>
+            <div class="col-md-12 text-center">
+            <button class="btn btn-success" (click)="followBack(us)">Follow Back</button>
+            </div> 
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  

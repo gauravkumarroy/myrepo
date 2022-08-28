@@ -1,0 +1,27 @@
+<app-header></app-header>
+
+<div style="display: flex; margin-top:10vh;">
+
+<form style="margin-left:10vw;background-color: white; padding: 20px 20px;border-radius: 5px;" (ngSubmit)="update()">
+    <p class="hint-text" style="color:gray;font-size: 1.3rem;" >Update your account.</p>
+    <div class="form-group">
+        <div class="row">
+            <div class="col"><input type="text" class="form-control" id="fname" name="fname" placeholder="First Name" required="required" [(ngModel)]="user.fname"></div>
+            <div class="col"><input type="text" class="form-control" id="lname" name="lname" placeholder="Last Name" required="required"[(ngModel)]="user.lname" ></div>
+        </div>  
+        <br>      	
+    </div>
+    <div class="form-group">
+        <input type="email" class="form-control" name="email" id="email"  placeholder="Email" required="required" [(ngModel)]="user.email" disabled>
+    </div>
+    <br>
+    <div class="form-group">
+        <input type="password" class="form-control" name="password" id="password" placeholder="Password" required="required"[(ngModel)]="user.password" >
+    </div>
+    <br>    
+    
+    <div class="form-group">
+        <button type="submit" class="btn btn-success btn-lg btn-block" >Update Now</button>
+    </div>
+</form>
+</div>
